@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PODI-Log in</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+	 <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="Login_v4/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="Login_v4/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="Login_v4/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="Login_v4/vendor/animate/animate.css">
+<!--===============================================================================================-->  
+  <link rel="stylesheet" type="text/css" href="Login_v4/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="Login_v4/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="Login_v4/vendor/select2/select2.min.css">
+<!--===============================================================================================-->  
+  <link rel="stylesheet" type="text/css" href="Login_v4/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="Login_v4/css/util.css">
+  <link rel="stylesheet" type="text/css" href="Login_v4/css/main.css">
+<!--===============================================================================================-->
+    <link rel="icon" type="image/ico" href="images/rou.png">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link href="//fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="preloader loader" style="display: block; background:#f2f2f2;"> <img src="images/loader2.gif"  alt="#"/></div>
+
+  	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+      <div class="container">
+          <a class="navbar-brand" href="/"><img class="logoimg" src="images/logo01.png"></a>
+           <a class="nav-link" data-target="#cart" data-toggle="modal"><span class="lnr lnr-cart"></span> <span class="total-count" style="font-size: 18px;"></span>
+              <button class="clear-cart" style="background-color: transparent; border:none;"></button></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Log in
+          </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+
+            
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="/menu" class="nav-link">Menu</a></li>
+            <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+            <!--li class="nav-item active"><a href="/login" class="lefta nav-link">Log in</a></li>
+            <li class="nav-item"><a href="orders" class="nav-link"><strong class="lnr lnr-dinner"></strong> Orders </a></li-->
+            
+             <!--log out-->
+              <li class="nav-item active"><a class="button button-header nav-link"href="/login"><i class="fa fa-lock fa-lg"></i> Login</a></li>
+              <li class="nav-item"><a class="nav-link" href="/signup"><i class="fa fa-user fa-lg"></i> Sign Up</a></li> 
+              <!--log out-->
+              
+            <!-- <li class="nav-item"><a class="nav-link" href="/orders"><span class="lnr lnr-cart"></span></a></li> -->
+            <li class="nav-item"><a class="nav-link"><i class="fa fa-money"></i> LKR</a></li>
+            
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- END nav -->
+
+<!-- main -->
+<div class="w3layouts-main"> 
+	<div class="bg-layer">
+      
+<div class="limiter">
+    <div class="container-login100">
+      <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+           <!-- show any messages that come back with authentication -->
+    <% if (message.length > 0) { %>
+        <div class="alert alert-danger"><%= message %></div>
+    <% } %>
+        <form class="login100-form validate-form" method="post" action="/login">
+          
+          <!--span class="login100-form-title p-b-48">
+            <img class="logoimg" src="images/PODI1.png">
+          </span-->
+          <span class="login100-form-title p-b-49">
+            Log in
+          </span>
+          <div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
+            <span class="label-input100">E-mail</span>
+            <input class="input100" type="text" name="email" placeholder="Type your E-mail">
+            <span class="focus-input100" data-symbol="&#xf206;"></span>
+          </div>
+
+          <div class="wrap-input100 validate-input" data-validate="Password is required">
+            <span class="label-input100">Password</span>
+            <input class="input100" type="password" name="password" placeholder="Type your password">
+            <span class="focus-input100" data-symbol="&#xf190;"></span>
+          </div>
+          
+          <div class="text-right p-t-8 p-b-31">
+            <a href="/password">
+              Forgot password?
+            </a>
+          </div>
+          
+          <div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+              <div class="login100-form-bgbtn"></div>
+              <button type="submit" class="login100-form-btn">
+                Login
+              </button>
+            </div>
+          </div>
+
+          <div class="txt1 text-center p-t-54 p-b-20">
+            <span class="span">
+              Or Sign Up Using
+            </span>
+          </div>
+
+          <div class="flex-c-m">
+            <a href="#" class="login100-social-item bg1">
+              <i class="fa fa-facebook"></i>
+            </a>
+
+            <a href="#" class="login100-social-item bg2">
+              <i class="fa fa-twitter"></i>
+            </a>
+
+            <a href="#" class="login100-social-item bg3">
+              <i class="fa fa-google"></i>
+            </a>
+          </div>
+
+          <div class="flex-col-c p-t-155">
+            <a href="/signup" class="txt2">
+              Sign Up
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+	</div>
+</div>	
+<!-- //main -->
+
+    <footer class="ftco-footer ftco-section img">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-7 col-md-6 mb-5 mb-md-5">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">About Us</h2>
+              <p>There are many best restaurants in <a href="https://en.wikipedia.org/wiki/Kilinochchi"> 
+          <strong class="text-uppercase" style="color: #E7E6E6;">Kilinochchi</strong></a>. But 
+          eating healthy is complicated at all. And, intricated to order from the desired location. 
+          There are plenty of cafes and restaurants to choose from for a tasty but unhealthy treat. 
+          While some have dishes for vegans. But haven't more classic dishes prepared with fresh 
+          and natural ingredients. Kilinochchi is the best farm city for rice and curry, but that’s 
+          not all that is available in the capital. Far from the classic local restaurants that 
+          also serve western style food, customers also have authentic healthy options in plenty 
+          of different styles. So we start the <a href="/"> <strong class="text-uppercase abp">
+          " PODI "</strong></a> delivery service to solve this problem, We are developing an 
+          application for our delivery service.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-5 mb-md-5">
+             <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Services</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">Cooked</a></li>
+                <li><a href="#" class="py-2 d-block">Delivery</a></li>
+                <li><a href="#" class="py-2 d-block">Organic Foods</a></li>
+                <li><a href="#" class="py-2 d-block">Restaurant</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Have a Questions?</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li><span class="icon icon-map-marker"></span><span class="text">423, Thirunagar Kilinochchi Sri Lanka 44000</span></li>
+                  <li><a href="#"><span class="icon icon-phone"></span><span class="text">(+94) 75 6270 561 <br> 
+                         (+94) 77 1000 516<br>
+                         (+94) 76 6972 829</span></a></li>
+                  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@podikilinochchi.com</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <a href="/"><img class="logoimg" src="images/logo01.png"></a>
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright&copy; <script>document.write(new Date().getFullYear());</script> All rights reserved <i class="icon-heart" aria-hidden="true"></i> by <a href="/" target="_blank"> | <strong class="company text-underline"><u> PODI </u></strong></a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+      <a id="scrollup" style="display: inline;">Scroll</a>
+      <!--div id="bg1">
+  <a href="createaccount">
+    <img src="images/scroll1.png" alt="">
+  </a>
+</div-->
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5d3828ea6d8083122839c385/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <!--div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div-->
+
+ <!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table">
+          
+        </table>
+        <div>Total price: $<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="/orders"><button type="button" class="btn btn-primary">Order now</button></a>
+      </div>
+    </div>
+  </div>
+</div> 
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/video.js"></script>
+    
+    <!--===============================================================================================-->
+  <script src="Login_v4/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+  <script src="Login_v4/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+  <script src="Login_v4/vendor/bootstrap/js/popper.js"></script>
+  <script src="Login_v4/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+  <script src="Login_v4/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+  <script src="Login_v4/vendor/daterangepicker/moment.min.js"></script>
+  <script src="Login_v4/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+  <script src="Login_v4/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+  <script src="Login_v4/js/main.js"></script>
+ <script src="js/count.js"></script>
+
+  </body>
+</html>

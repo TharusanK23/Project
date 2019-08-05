@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PODI-Menu</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <script src="sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <link rel="icon" type="image/ico" href="images/rou.png">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="asset/css/style.css"> -->
+
+  </head>
+  <body>
+    <div class="preloader loader" style="display: block; background:#f2f2f2;"> <img src="images/loader2.gif"  alt="#"/></div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+              <a class="navbar-brand" href="/"><img class="logoimg" src="images/logo01.png"></a>
+              <a class="nav-link" data-target="#cart" data-toggle="modal"><span class="lnr lnr-cart"></span> <span class="total-count" style="font-size: 18px;"></span>
+              <button class="clear-cart" style="background-color: transparent; border:none;"></button></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+              </button>
+          <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+
+            
+              <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+              <li class="nav-item active"><a href="/menu" class="nav-link">Menu</a></li>
+              <!--li class="nav-item"><a href="services" class="nav-link">Services</a></li>
+              <li class="nav-item"><a href="blog" class="nav-link">Blog</a></li-->
+              <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+              <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+            <!--li class="nav-item"><a href="/signup" class="lefta nav-link">Sign up</a></li>
+            <li class="nav-item"><a href="orders" class="nav-link"><strong class="lnr lnr-dinner"></strong> Orders </a></li>
+            <li class="nav-item"><a class="nav-link" href="/createaccount"><span class="lnr lnr-user"></span></a></li-->
+
+            <!--log out-->
+            <% if(user){ %>
+            <!--Welcome...!!--><li class="nav-item"><a class="nav-link" href="/user"><i class="fa fa-user"> </i>
+            <% if (user.twitter.username != null) { %>
+            <%= user.twitter.username %>
+            <% } else if (user.google.email != null) { %>
+            <%= user.google.email %>
+            <% } else if (user.facebook.name  != null)  { %>
+            <%= user.facebook.name  %>
+            <% } else { %>
+            <%= user.podi.firstnamepodi %>
+            <%= user.podi.lastname %>
+            <% } %>
+            </a>
+            </li>
+             <li class="nav-item"><a class="nav-link" href="/logout"><i class="fa fa-sign-out"></i>Logout</a></li>
+             <% } else{ %>
+              <li class="nav-item"><a class="button button-header nav-link"href="/login"><span class="fa fa-lock fa-lg"></span> Login</a></li>
+              <li class="nav-item"><a class="nav-link" href="/signup"><i class="fa fa-user fa-lg"></i> Sign Up</a></li> 
+              <% } %>
+              <!--log out-->
+            
+             <!--  <li class="nav-item"><a class="nav-link" data-target="#cart" data-toggle="modal"><span class="lnr lnr-cart"></span>(<span class="total-count"></span>)
+              <button class="clear-cart" style="background-color: transparent; border:none;"></button></a></li> -->
+            <li class="nav-item"><a class="nav-link"><i class="fa fa-money"></i> LKR</a></li>
+
+            
+            </ul>
+          </div>
+          </div>
+      </nav>
+    <!-- END nav -->
+
+    <section class="home-slider owl-carousel img" style="background-image: url(images/09.jpg);">
+
+      <div class="slider-item" style="background-image: url(images/0.jpg);">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text justify-content-center align-items-center">
+
+            <div class="col-md-7 col-sm-12 text-center ftco-animate">
+            	<h1 class="mb-3 mt-5 bread">PODI Menu</h1>
+	            <p class="breadcrumbs"><span class="mr-2"><a href="/">Home</a></span> <span>Menu</span></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    
+		<section class="ftco-section">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+            <h2 class="mb-4">Our Menu</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+          </div>
+        </div>
+    	</div>
+    	<div class="container-wrap">
+            <div class="row no-gutters d-flex">
+                <div class="col-lg-4 d-flex ftco-animate">
+                    <div class="services-wrap d-flex">
+                        <a href="#" class="img cd-cart__image" style="background-image: url(images/03.jpg);"></a>
+                        <!-- <div class="product-description" data-name="Wine #1" data-price="5">
+                        <h3 class="product-name">Wine #1</h3>
+                        <p class="product-price">&euro; 5</p>
+                        <form class="add-to-cart" action="/order" method="post">
+                            <div>
+                                <label for="qty-1">Quantity</label>
+                                <input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
+                            </div>
+                            <p><input type="submit" value="Add to cart" class="btn" /></p>
+                        </form>
+                    </div> -->
+                        <div class="text p-4">
+                            <h3>Vanni Stringhoppers</h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia </p>
+                           <!--  <form class="add-to-cart" data-name="Vanni_Stringhoppers" data-price="5.00" action="cart.html" method="post"> -->
+                            <p class="price"><span>LKR 05.00</span> <input type="submit" data-name="Vanni_Stringhoppers" data-price="5.00" value="Order Now" class="ml-2 btn btn-white btn-outline-white add-to-cart" /></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex ftco-animate">
+                    <div class="services-wrap d-flex">
+                        <a href="#" class="img" style="background-image: url(images/04.jpg);"></a>
+                        <div class="text p-4">
+                            <h3>Masala Dosa</h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                            <p class="price"><span>LKR 150.00</span> <input type="submit" data-name="Masala_Dosa" data-price="150.00" value="Order Now" class="ml-2 btn btn-white btn-outline-white add-to-cart" /></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex ftco-animate">
+                    <div class="services-wrap d-flex">
+                        <a href="#" class="img" style="background-image: url(images/05.jpg);"></a>
+                        <div class="text p-4">
+                            <h3>Paper Dosa</h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                            <p class="price"><span>LKR 200.00</span> <input type="submit" data-name="Paper_Dosa" data-price="200.00" value="Order Now" class="ml-2 btn btn-white btn-outline-white add-to-cart" /></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 d-flex ftco-animate">
+                    <div class="services-wrap d-flex">
+                        <a href="#" class="img order-lg-last" style="background-image: url(images/06.jpg);"></a>
+                        <div class="text p-4">
+                            <h3>Naaddu Chicken</h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia </p>
+                            <p class="price"><span>LKR 250.00</span> <input type="submit" data-name="Naaddu_Chicken" data-price="250.00" value="Order Now" class="ml-2 btn btn-white btn-outline-white add-to-cart" /></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex ftco-animate">
+                    <div class="services-wrap d-flex">
+                        <a href="#" class="img order-lg-last" style="background-image: url(images/07.jpg);"></a>
+                        <div class="text p-4">
+                            <h3>Cilli Parotta</h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                            <p class="price"><span>LKR 130.00</span> <input type="submit" data-name="Cilli_Parotta" data-price="130.00" value="Order Now" class="ml-2 btn btn-white btn-outline-white add-to-cart" /></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex ftco-animate">
+                    <div class="services-wrap d-flex">
+                        <a href="#" class="img order-lg-last" style="background-image: url(images/08.jpg);"></a>
+                        <div class="text p-4">
+                            <h3>Kulaisaatham</h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                            <p class="price"><span>LKR 80.00</span> <input type="submit" data-name="Kulaisaatham" data-price="80.00" value="Order Now" class="ml-2 btn btn-white btn-outline-white add-to-cart" /></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    	<div class="container">
+    		<div class="row justify-content-center mb-5 pb-3 mt-5 pt-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Our Menu Pricing</h2>
+            <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
+            <p class="mt-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="pricing-entry d-flex ftco-animate">
+                    <div class="img" style="background-image: url(images/03.jpg);"></div>
+                    <div class="desc pl-3">
+                        <div class="d-flex text align-items-center">
+                            <h3><span>Vanni Stringhoppers</span></h3>
+                            <span class="price">LKR 5.00</span>
+                        </div>
+                        <div class="d-block">
+                            <p>A small river named Duden flows by their place and supplies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing-entry d-flex ftco-animate">
+                    <div class="img" style="background-image: url(images/04.jpg);"></div>
+                    <div class="desc pl-3">
+                        <div class="d-flex text align-items-center">
+                            <h3><span>Masala Dosa</span></h3>
+                            <span class="price">LKR 150.00</span>
+                        </div>
+                        <div class="d-block">
+                            <p>A small river named Duden flows by their place and supplies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing-entry d-flex ftco-animate">
+                    <div class="img" style="background-image: url(images/05.jpg);"></div>
+                    <div class="desc pl-3">
+                        <div class="d-flex text align-items-center">
+                            <h3><span>Paper Dosa</span></h3>
+                            <span class="price">LKR 200.00</span>
+                        </div>
+                        <div class="d-block">
+                            <p>A small river named Duden flows by their place and supplies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing-entry d-flex ftco-animate">
+                    <div class="img" style="background-image: url(images/06.jpg);"></div>
+                    <div class="desc pl-3">
+                        <div class="d-flex text align-items-center">
+                            <h3><span>Naaddu Chicken</span></h3>
+                            <span class="price">LKR 250.00</span>
+                        </div>
+                        <div class="d-block">
+                            <p>A small river named Duden flows by their place and supplies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="pricing-entry d-flex ftco-animate">
+                    <div class="img" style="background-image: url(images/07.jpg);"></div>
+                    <div class="desc pl-3">
+                        <div class="d-flex text align-items-center">
+                            <h3><span>Cilli Parotta</span></h3>
+                            <span class="price">LKR 130.00</span>
+                        </div>
+                        <div class="d-block">
+                            <p>A small river named Duden flows by their place and supplies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing-entry d-flex ftco-animate">
+                    <div class="img" style="background-image: url(images/08.jpg);"></div>
+                    <div class="desc pl-3">
+                        <div class="d-flex text align-items-center">
+                            <h3><span>Kulaisaatham</span></h3>
+                            <span class="price">LKR 80.00</span>
+                        </div>
+                        <div class="d-block">
+                            <p>A small river named Duden flows by their place and supplies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing-entry d-flex ftco-animate">
+                    <div class="img" style="background-image: url(images/01.png);"></div>
+                    <div class="desc pl-3">
+                        <div class="d-flex text align-items-center">
+                            <h3><span>Jaffna Dosa</span></h3>
+                            <span class="price">LKR 120.00</span>
+                        </div>
+                        <div class="d-block">
+                            <p>A small river named Duden flows by their place and supplies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing-entry d-flex ftco-animate">
+                    <div class="img" style="background-image: url(images/02.png);"></div>
+                    <div class="desc pl-3">
+                        <div class="d-flex text align-items-center">
+                            <h3><span>Indian Idli</span></h3>
+                            <span class="price">LKR 15.00</span>
+                        </div>
+                        <div class="d-block">
+                            <p>A small river named Duden flows by their place and supplies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    	</div>
+    </section>
+
+    <section class="ftco-menu">
+        <div class="container-fluid">
+            <div class="row d-md-flex">
+
+                <div class="col-lg-12 ftco-animate p-md-9">
+                    <div class="row">
+                  <div class="col-md-12 nav-link-wrap mb-5">
+                    <div class="nav ftco-animate nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                      <a class="nav-link active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">PODI Special</a>
+
+                      <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Drinks</a>
+
+                      <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false"> Healthy Burgers</a>
+
+                      <a class="nav-link" id="v-pills-4-tab" data-toggle="pill" href="#v-pills-4" role="tab" aria-controls="v-pills-4" aria-selected="false">Pasta</a>
+                    </div>
+                  </div>
+                  <div class="col-md-12 d-flex align-items-center">
+                    
+                    <div class="tab-content ftco-animate" id="v-pills-tabContent">
+
+                      <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">
+                        <div class="row">
+                            <div class="col-md-3 text-center">
+                                <div class="menu-wrap">
+                                    <a href="#" class="menu-img img mb-3" style="background-image: url(images/03.jpg);"></a>
+                                    <div class="text">
+                                        <h3><a href="#">Vanni Stringhoppers</a></h3>
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                                        <p class="price"><span>LKR 5.00</span></p>
+                                        <p><input type="submit" data-name="Vanni_Stringhoppers" data-price="5.00" value="Order Now" class="ml-2 btn btn-white btn-outline-white add-to-cart" /></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <div class="menu-wrap">
+                                    <a href="#" class="menu-img img mb-3" style="background-image: url(images/04.jpg);"></a>
+                                    <div class="text">
+                                        <h3><a href="#">Masala Dosa</a></h3>
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                                        <p class="price"><span>LKR 150.00</span></p>
+                                        <p><input type="submit" data-name="Masala_Dosa" data-price="150.00" value="Order Now" class="ml-2 btn btn-white btn-outline-white add-to-cart" /></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <div class="menu-wrap">
+                                    <a href="#" class="menu-img img mb-3" style="background-image: url(images/05.jpg);"></a>
+                                    <div class="text">
+                                        <h3><a href="#">Paper Dosa</a></h3>
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                                        <p class="price"><span>LKR 200.00</span></p>
+                                        <p><input type="submit" data-name="Paper_Dosa" data-price="200.00" value="Order Now" class="ml-2 btn btn-white btn-outline-white add-to-cart" /></p>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="col-md-3 text-center">
+                        <div class="menu-wrap">
+                          <a href="#" class="menu-img img mb-3" style="background-image: url(images/06.jpg);"></a>
+                          <div class="text">
+                            <h3><a href="#">Naaddu Chicken</a></h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                            <p class="price"><span>LKR 250.00</span></p>
+                            <p><input type="submit" data-name="Naaddu_Chicken" data-price="250.00" value="Order Now" class="ml-2 btn btn-white btn-outline-white add-to-cart" /></p>
+                          </div>
+                        </div>
+                      </div>
+                        </div>
+
+                    <div class="row">
+                      <div class="col-md-3 text-center">
+                        <div class="menu-wrap">
+                          <a href="#" class="menu-img img mb-3" style="background-image: url(images/01.png);"></a>
+                          <div class="text">
+                            <h3><a href="#">Jaffna Dosa</a></h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                            <p class="price"><span>LKR 120.00</span></p>
+                            <p><input type="submit" data-name="Jaffna_Dosa" data-price="120.00" value="Order Now" class="ml-2 btn btn-white btn-outline-white add-to-cart" /></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 text-center">
+                        <div class="menu-wrap">
+                          <a href="#" class="menu-img img mb-3" style="background-image: url(images/02.png);"></a>
+                          <div class="text">
+                            <h3><a href="#">Indian Idli</a></h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                            <p class="price"><span>LKR 15.00</span></p>
+                            <p><input type="submit" data-name="Indian_Idli" data-price="15.00" value="Order Now" class="ml-2 btn btn-white btn-outline-white add-to-cart" /></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 text-center">
+                        <div class="menu-wrap">
+                          <a href="#" class="menu-img img mb-3" style="background-image: url(images/07.jpg);"></a>
+                          <div class="text">
+                            <h3><a href="#">Paper Dosa</a></h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                            <p class="price"><span>LKR 200.00</span></p>
+                            <p><input type="submit" data-name="Paper_Dosa" data-price="200.00" value="Order Now" class="ml-2 btn btn-white btn-outline-white add-to-cart" /></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 text-center">
+                        <div class="menu-wrap">
+                          <a href="#" class="menu-img img mb-3" style="background-image: url(images/08.jpg);"></a>
+                          <div class="text">
+                            <h3><a href="#">Naaddu Chicken</a></h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                            <p class="price"><span>LKR 250.00</span></p>
+                            <p><input type="submit" data-name="Naaddu_Chicken" data-price="250.00" value="Order Now" class="ml-2 btn btn-white btn-outline-white add-to-cart" /></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                      </div>
+
+                      <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2-tab">
+                        <div class="row">
+                            <div class="col-md-3 text-center">
+                                <div class="menu-wrap">
+                                    <a href="#" class="menu-img img mb-3" style="background-image: url(images/drink-1.jpg);"></a>
+                                    <div class="text">
+                                        <h3><a href="#">Lemon Juice</a></h3>
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                                        <p class="price"><span>LKR 100.00</span></p>
+                                        <p><input type="submit" data-name="Lemon_Juice" data-price="100.00" value="Order Now" class="ml-2 btn btn-white btn-outline-white add-to-cart" /></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <div class="menu-wrap">
+                                    <a href="#" class="menu-img img mb-3" style="background-image: url(images/J1.jpg);"></a>
+                                    <div class="text">
+                                        <h3><a href="#">Orange Juice</a></h3>
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                                        <p class="price"><span>LKR 60.00</span></p>
+                                        <p><input type="submit" data-name="Orange_Juice" data-price="60.00" value="Order Now" class="ml-2 btn btn-white btn-outline-white add-to-cart" /></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <div class="menu-wrap">
+                                    <a href="#" class="menu-img img mb-3" style="background-image: url(images/J2.png);"></a>
+                                    <div class="text">
+                                        <h3><a href="#">Watermelon Juice</a></h3>
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                                        <p class="price"><span>LKR 90.00</span></p>
+                                        <p><input type="submit" data-name="Watermelon_Juice" data-price="90.00" value="Order Now" class="ml-2 btn btn-white btn-outline-white add-to-cart" /></p>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="col-md-3 text-center">
+                        <div class="menu-wrap">
+                          <a href="#" class="menu-img img mb-3" style="background-image: url(images/J3.jpg);"></a>
+                          <div class="text">
+                            <h3><a href="#">Passion Juice</a></h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                            <p class="price"><span>LKR 110.00</span></p>
+                            <p><input type="submit" data-name="Passion_Juice" data-price="110.00" value="Order Now" class="ml-2 btn btn-white btn-outline-white add-to-cart" /></p>
+                          </div>
+                        </div>
+                      </div>
+                        </div>
+
+                    <div class="row">
+                      <div class="col-md-3 text-center">
+                        <div class="menu-wrap">
+                          <a href="#" class="menu-img img mb-3" style="background-image: url(images/J4.jpg);"></a>
+                          <div class="text">
+                            <h3><a href="#">Carrot Juice</a></h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                            <p class="price"><span>LKR 150.00</span></p>
+                            <p><input type="submit" data-name="Carrot_Juice" data-price="150.00" value="Order Now" class="ml-2 btn btn-white btn-outline-white add-to-cart" /></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 text-center">
+                        <div class="menu-wrap">
+                          <a href="#" class="menu-img img mb-3" style="background-image: url(images/J3.png);"></a>
+                          <div class="text">
+                            <h3><a href="#">Mango Juice</a></h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                            <p class="price"><span>LKR 80.00</span></p>
+                            <p><input type="submit" data-name="Mango_Juice" data-price="80.00" value="Order Now" class="ml-2 btn btn-white btn-outline-white add-to-cart" /></p>
+                          </div>
+                        </div>
+                      </div>
+                      <!--div class="col-md-3 text-center">
+                        <div class="menu-wrap">
+                          <a href="#" class="menu-img img mb-3" style="background-image: url(images/J2.png);"></a>
+                          <div class="text">
+                            <h3><a href="#">Watermelon Juice</a></h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                            <p class="price"><span>LKR 90.00</span></p>
+                            <p><a href="#" class="btn btn-white btn-outline-white">Add to cart</a></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 text-center">
+                        <div class="menu-wrap">
+                          <a href="#" class="menu-img img mb-3" style="background-image: url(images/J3.jpg);"></a>
+                          <div class="text">
+                            <h3><a href="#">Passion Juice</a></h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                            <p class="price"><span>LKR 110.00</span></p>
+                            <p><a href="#" class="btn btn-white btn-outline-white">Add to cart</a></p>
+                          </div>
+                        </div>
+                      </div-->
+                    </div>
+                      </div>
+
+                      <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-3-tab">
+                        <div class="row">
+                      <div class="col-md-3 text-center text-white"></div>
+                      <div class="col-md-12 text-center text-white"> *** Burgers No Availables *** </div>
+                            <!--div class="col-md-3 text-center">
+                                <div class="menu-wrap">
+                                    <a href="#" class="menu-img img mb-3" style="background-image: url(images/burger-1.jpg);"></a>
+                                    <div class="text">
+                                        <h3><a href="#">Itallian Pizza</a></h3>
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                                        <p class="price"><span>$2.90</span></p>
+                                        <p><a href="#" class="btn btn-white btn-outline-white">Add to cart</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <div class="menu-wrap">
+                                    <a href="#" class="menu-img img mb-3" style="background-image: url(images/burger-2.jpg);"></a>
+                                    <div class="text">
+                                        <h3><a href="#">Itallian Pizza</a></h3>
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                                        <p class="price"><span>$2.90</span></p>
+                                        <p><a href="#" class="btn btn-white btn-outline-white">Add to cart</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <div class="menu-wrap">
+                                    <a href="#" class="menu-img img mb-3" style="background-image: url(images/burger-3.jpg);"></a>
+                                    <div class="text">
+                                        <h3><a href="#">Itallian Pizza</a></h3>
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                                        <p class="price"><span>$2.90</span></p>
+                                        <p><a href="#" class="btn btn-white btn-outline-white">Add to cart</a></p>
+                                    </div>
+                                </div>
+                            </div-->
+                        </div>
+                      </div>
+
+                      <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-4-tab">
+                        <div class="row">
+                      <div class="col-md-3 text-center text-white"></div>
+                      <div class="col-md-12 text-center text-white"> *** Pastas No Availables *** </div>
+                            <!--div class="col-md-3 text-center">
+                                <div class="menu-wrap">
+                                    <a href="#" class="menu-img img mb-3" style="background-image: url(images/pasta-1.jpg);"></a>
+                                    <div class="text">
+                                        <h3><a href="#">Itallian Pizza</a></h3>
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                                        <p class="price"><span>$2.90</span></p>
+                                        <p><a href="#" class="btn btn-white btn-outline-white">Add to cart</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <div class="menu-wrap">
+                                    <a href="#" class="menu-img img mb-3" style="background-image: url(images/pasta-2.jpg);"></a>
+                                    <div class="text">
+                                        <h3><a href="#">Itallian Pizza</a></h3>
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                                        <p class="price"><span>$2.90</span></p>
+                                        <p><a href="#" class="btn btn-white btn-outline-white">Add to cart</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <div class="menu-wrap">
+                                    <a href="#" class="menu-img img mb-3" style="background-image: url(images/pasta-3.jpg);"></a>
+                                    <div class="text">
+                                        <h3><a href="#">Itallian Pizza</a></h3>
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                                        <p class="price"><span>$2.90</span></p>
+                                        <p><a href="#" class="btn btn-white btn-outline-white">Add to cart</a></p>
+                                    </div>
+                                </div>
+                            </div-->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="ftco-footer ftco-section img">
+        <div class="overlay"></div>
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-7 col-md-6 mb-5 mb-md-5">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">About Us</h2>
+              <p>There are many best restaurants in <a href="https://en.wikipedia.org/wiki/Kilinochchi"> 
+          <strong class="text-uppercase" style="color: #E7E6E6;">Kilinochchi</strong></a>. But 
+          eating healthy is complicated at all. And, intricated to order from the desired location. 
+          There are plenty of cafes and restaurants to choose from for a tasty but unhealthy treat. 
+          While some have dishes for vegans. But haven't more classic dishes prepared with fresh 
+          and natural ingredients. Kilinochchi is the best farm city for rice and curry, but that’s 
+          not all that is available in the capital. Far from the classic local restaurants that 
+          also serve western style food, customers also have authentic healthy options in plenty 
+          of different styles. So we start the <a href="/"> <strong class="text-uppercase abp">
+          " PODI "</strong></a> delivery service to solve this problem, We are developing an 
+          application for our delivery service.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <!--div class="col-lg-4 col-md-6 mb-5 mb-md-5">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Recent Blog</h2>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/03.jpg);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> Sept 15, 2018</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/06.jpg);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> Sept 15, 2018</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div-->
+          <div class="col-lg-2 col-md-6 mb-5 mb-md-5">
+             <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Services</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">Cooked</a></li>
+                <li><a href="#" class="py-2 d-block">Delivery</a></li>
+                <li><a href="#" class="py-2 d-block">Organic Foods</a></li>
+                <li><a href="#" class="py-2 d-block">Restaurant</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+            <div class="ftco-footer-widget mb-4">
+                <h2 class="ftco-heading-2">Have a Questions?</h2>
+                <div class="block-23 mb-3">
+                  <ul>
+                    <li><span class="icon icon-map-marker"></span><span class="text">423, Thirunagar Kilinochchi Sri Lanka 44000</span></li>
+                    <li><a href="#"><span class="icon icon-phone"></span><span class="text">(+94) 75 6270 561 <br> 
+                         (+94) 77 1000 516<br>
+                         (+94) 76 6972 829</span></a></li>
+                    <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@podikilinochchi.com</span></a></li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <a href="/"><img class="logoimg" src="images/logo01.png"></a>
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright&copy; <script>document.write(new Date().getFullYear());</script> All rights reserved <i class="icon-heart" aria-hidden="true"></i> by <a href="/" target="_blank"> | <strong class="company text-underline"><u> PODI </u></strong></a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+      <a id="scrollup" style="display: inline;">Scroll</a>
+      <div id="bg1">
+        <a href="tel:+94771000516">
+          <img src="images/scroll2.png" alt="">
+        </a>
+      </div>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5d3828ea6d8083122839c385/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+    </footer>
+    
+
+    <!-- <div class="cd-cart cd-cart--empty js-cd-cart">
+    <a href="#0" class="cd-cart__trigger text-replace">
+        Cart
+        <ul class="cd-cart__count"> --> <!-- cart items count -->
+            <!-- <li>0</li>
+            <li>0</li>
+        </ul> --> <!-- .cd-cart__count -->
+<!--     </a>
+
+    <div class="cd-cart__content">
+        <div class="cd-cart__layout">
+            <header class="cd-cart__header"> -->
+<!--                 <h2>Cart</h2> -->
+              <!--   <span class="cd-cart__undo">Item removed. <a href="#0">Undo</a></span>
+            </header>
+            
+            <div class="cd-cart__body">
+                <ul> -->
+                    <!-- products added to the cart will be inserted here using JavaScript -->
+         <!--        </ul>
+            </div>
+
+            <footer class="cd-cart__footer">
+                <a href="#0" class="cd-cart__checkout">
+          <em>Checkout - LKR<span> 0</span>
+            <svg class="icon icon--sm" viewBox="0 0 24 24"><g fill="none" stroke="currentColor"><line stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="3" y1="12" x2="21" y2="12"/><polyline stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="15,6 21,12 15,18 "/></g>
+            </svg>
+          </em>
+        </a>
+            </footer>
+        </div>
+    </div> --> <!-- .cd-cart__content -->
+<!-- </div> --> <!-- cd-cart -->
+
+  
+
+  <!-- loader -->
+  <!--div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div-->
+
+ <!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table">
+          
+        </table>
+        <div>Total price: $<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="/orders"><button type="button" class="btn btn-primary">Order now</button></a>
+      </div>
+    </div>
+  </div>
+</div> 
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/video.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+ <!--  <script src="asset/js/util.js"></script> util functions included in the CodyHouse framework
+<script src="asset/js/main.js"></script> 
+ -->
+ <script src="js/count.js"></script>
+ <!-- <script src="js/jquery.shop.js"></script> -->
+    
+  </body>
+</html>

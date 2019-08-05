@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PODI-Creat an Account</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+	 <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+
+
+    <link rel="icon" type="image/ico" href="images/rou.png">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link href="//fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/main.min.css">
+    <link rel="stylesheet" type="text/css" href="css/upload.css">
+
+  </head>
+  <body>
+    <div class="preloader loader" style="display: block; background:#f2f2f2;"> <img src="images/loader2.gif"  alt="#"/></div>
+
+  	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+      <div class="container">
+          <a class="navbar-brand" href="/"><img class="logoimg" src="images/logo01.png"></a>
+          <a class="nav-link"  href="/orders"><span class="lnr lnr-cart"></span> <span class="total-count" style="font-size: 18px;"></span>
+              <button class="clear-cart" style="background-color: transparent; border:none;"></button></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> User
+          </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+
+            
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="/menu" class="nav-link">Menu</a></li>
+            <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+            <!--li class="nav-item"><a href="orders" class="nav-link"><strong class="lnr lnr-dinner"></strong> Orders </a></li>
+            <li class="nav-item active"><a class="nav-link" href="/createaccount"><span class="lnr lnr-user"></span></a></li-->
+            <!--log out-->
+            <% if(user){ %>
+            <!--Welcome...!!--><li class="nav-item active"><a class="nav-link" href="/user"><i class="fa fa-user"> </i>
+            <% if (user.twitter.username != null) { %>
+            <%= user.twitter.username %>
+            <% } else if (user.google.email != null) { %>
+            <%= user.google.email %>
+            <% } else if (user.facebook.name  != null)  { %>
+            <%= user.facebook.name  %>
+            <% } else { %>
+            <%= user.podi.firstnamepodi %>
+            <%= user.podi.lastname %>
+            <% } %>
+            </a>
+            </li>
+             <li class="nav-item"><a class="nav-link" href="/logout"><i class="fa fa-sign-out"></i>Logout</a></li>
+             <% } else{ %>
+              <li class="nav-item"><a class="button button-header nav-link"href="/login"><i class="fa fa-lock fa-lg"></i> Login</a></li>
+              <li class="nav-item"><a class="nav-link" href="/signup"><i class="fa fa-user fa-lg"></i> Sign Up</a></li> 
+              <% } %>
+              <!--log out-->
+            <!-- <li class="nav-item"><a class="nav-link" href="/orders"><span class="lnr lnr-cart"></span></a></li>  -->
+              
+            <li class="nav-item"><a class="nav-link"><i class="fa fa-money"></i> LKR</a></li>
+            
+
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- END nav -->
+
+<!-- main -->
+
+<section class="ftco-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 ftco-animate">
+                      <form action="#" class="billing-form ftco-bg-dark p-3 p-md-5">
+
+                          <h3 class="mb-4 billing-heading">MY PROFILE</h3>
+                <div class="row align-items-end">
+                    <div class="col-md-3">
+                  <div class="form-group zoom">
+                    <!-- <img src="images/scroll1.png"  alt="small" width="150" height="150" class="alignleft size-medium wp-image-7000" /> -->
+
+<input type='file' onchange="readURL(this);" />
+<img id="blah" src="http://placehold.it/180" alt="your image" />
+
+                  </div>
+                </div>
+                <div class="col-md-9">
+                  <div class="form-group">
+                      <label for="lastname"><h1 class="text-uppercase"><%= user.local.firstname %> <%= user.local.lastname %></h1></label>
+                    
+                  </div>
+              </div>
+              <div class="w-100"></div>
+                  <div class="col-md-12">
+                      <div class="form-group">
+                          <label for="country"><!-- <h4>**************************************************************************************</h4> --></label>
+                      </div>
+                  </div>
+                  <div class="col-md-12">
+                      <div class="form-group">
+                          <label for="country"><h3>User Name :- <%= user.local.firstname %> <%= user.local.lastname %> </h3></label>
+                      </div>
+                  </div>
+                  <div class="col-md-12">
+                      <div class="form-group">
+                          <label for="country"><h3>Date of Birth :- <%= user.local.dob %></h3></label>
+                      </div>
+                  </div>
+                  <div class="col-md-12">
+                      <div class="form-group">
+                          <label for="country"><h3>E-mail :- <%= user.local.email %></h3></label>
+                      </div>
+                  </div>
+
+                  <div class="col-md-12">
+                      <div class="form-group">
+                          <label for="country"><h3>Phone :- <%= user.local.phonenumber %></h3></label>
+                      </div>
+                  </div>
+                  <div class="col-md-12">
+                      <div class="form-group">
+                          <label for="country"><h3>City :- <%= user.local.city %></h3></label>
+                      </div>
+                  </div>
+                  <div class="col-md-12">
+                      <div class="form-group">
+                          <label for="country"><h3>Address :- <%= user.local.add1 %> <%= user.local.add2 %> <br>
+                            <%= user.local.city %> <br>
+                            <%= user.local.state %> <br>
+                            <%= user.local.zip %> <br> </h3></label>
+                      </div>
+                  </div>
+
+                  
+                  
+
+                  <!-- <div class="col-md-12">
+                      <div class="form-group">
+                          <label for="country"><h4>User Name :- <%= user.local.lastname %></h4></label>
+                      </div>
+                  </div>
+                <div class="col-md-12">
+                      <div class="form-group">
+                          <label for="country"><h4>User Name :- <%= user.local.lastname %></h4></label>
+                      </div>
+                  </div>  -->             
+
+                </div>
+
+              <!-- <div class="form-group">
+                  <div class="col-md-12">
+                    <div class="checkbox">
+                      <p>
+              <input type="checkbox" id="test1">
+                <label for="test1">
+                  I agree to terms & condistions and privacy policy
+                </label>
+            </p>
+                    </div>
+                  </div>
+              </div> -->
+              <p><a href="/createaccount"class="btn btn-primary py-3 px-4">Update</a></p>
+            </form><!-- END -->
+
+        </div> <!-- .col-md-8 -->
+
+
+      </div>
+    </div>
+  </section>
+<!-- //main -->
+
+    <footer class="ftco-footer ftco-section img">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-7 col-md-6 mb-5 mb-md-5">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">About Us</h2>
+              <p>There are many best restaurants in <a href="https://en.wikipedia.org/wiki/Kilinochchi"> 
+          <strong class="text-uppercase" style="color: #E7E6E6;">Kilinochchi</strong></a>. But 
+          eating healthy is complicated at all. And, intricated to order from the desired location. 
+          There are plenty of cafes and restaurants to choose from for a tasty but unhealthy treat. 
+          While some have dishes for vegans. But haven't more classic dishes prepared with fresh 
+          and natural ingredients. Kilinochchi is the best farm city for rice and curry, but that’s 
+          not all that is available in the capital. Far from the classic local restaurants that 
+          also serve western style food, customers also have authentic healthy options in plenty 
+          of different styles. So we start the <a href="/"> <strong class="text-uppercase abp">
+          " PODI "</strong></a> delivery service to solve this problem, We are developing an 
+          application for our delivery service.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-5 mb-md-5">
+             <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Services</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">Cooked</a></li>
+                <li><a href="#" class="py-2 d-block">Delivery</a></li>
+                <li><a href="#" class="py-2 d-block">Organic Foods</a></li>
+                <li><a href="#" class="py-2 d-block">Restaurant</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Have a Questions?</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li><span class="icon icon-map-marker"></span><span class="text">423, Thirunagar Kilinochchi Sri Lanka 44000</span></li>
+                  <li><a href="#"><span class="icon icon-phone"></span><span class="text">(+94) 75 6270 561 <br> 
+                         (+94) 77 1000 516<br>
+                         (+94) 76 6972 829</span></a></li>
+                  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@podikilinochchi.com</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <a href="/"><img class="logoimg" src="images/logo01.png"></a>
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright&copy; <script>document.write(new Date().getFullYear());</script> All rights reserved <i class="icon-heart" aria-hidden="true"></i> by <a href="/" target="_blank"> | <strong class="company text-underline"><u> PODI </u></strong></a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+      <a id="scrollup" style="display: inline;">Scroll</a>
+      <!--div id="bg1">
+  <a href="createaccount">
+    <img src="images/scroll1.png" alt="">
+  </a>
+</div-->
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5d3828ea6d8083122839c385/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <!--div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div-->
+
+ 
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/video.js"></script>
+  <script src="js/count.js"></script>
+  <script src="js/upload.js"></script>
+
+ 
+
+
+    
+  </body>
+</html>
